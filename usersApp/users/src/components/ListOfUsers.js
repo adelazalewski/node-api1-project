@@ -1,21 +1,16 @@
-import React, {useEffect, useState} from "react";
-import Card from "./UserCard";
-import axios from "axios";
+import React from "react";
+import { Link } from "react-router-dom";
+import Card from "./Card";
 
-export default function UsersList(){
-    const [users, setUsers] = useState([]);
-useEffect(() => {
-axios.get('http://localhost:8000')
-.then(res => {
-    console.log(res);
-    setUsers(res.data)})
-.catch(err => console.log(err))
-}, []);
+
+export default function UsersList(props){
+    
 return (
-<>
-{users.length < 1 ? <h1>Fetching team memebers...</h1> : (
-    users.map(user => <Card key={user.id} user={user} />)
-)}
-</>
+<div className="users-list">
+<h2>Meet the team</h2>
+{
+    props.users.map(user => <Link key={user.id} to={`/users/${user.id}`} ><Card user={user}  /></Link> 
+    )}
+</div>
 )
 }
