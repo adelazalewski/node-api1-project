@@ -1,0 +1,24 @@
+{
+  "name": "api1-project",
+  "version": "1.0.0",
+  "description": "first api project",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adelazalewski/node-api1-project.git"
+  },
+  "author": "adela zalewski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adelazalewski/node-api1-project/issues"
+  },
+  "homepage": "https://github.com/adelazalewski/node-api1-project#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "shortid": "^2.2.16"
+  }
+}
